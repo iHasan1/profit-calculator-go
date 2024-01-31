@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-// import "math"
-
 func main() {
 	var revenue, expenses, taxRate float64
 
@@ -20,12 +18,7 @@ func main() {
 	profit := earningsBeforeTax * (1 - taxRate/100)
 	ratio := earningsBeforeTax / profit
 
-	fmt.Print("Your Earnings Before Tax (EBT) is:")
-	fmt.Print(earningsBeforeTax)
-	fmt.Println()
-	fmt.Print("Your Profit is: ")
-	fmt.Print(profit)
-	fmt.Println()
-	fmt.Print("Ratio: ")
-	fmt.Print(ratio)
+	fmt.Println("Your Earnings Before Tax (EBT) is:", earningsBeforeTax)
+	fmt.Println("Your Profit is:", profit)
+	fmt.Printf("Ratio: %v", ratio)
 }
