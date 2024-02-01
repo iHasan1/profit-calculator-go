@@ -9,9 +9,9 @@ func main() {
 
 	earningsBeforeTax, profit, ratio := calcValues(revenue, expenses, taxRate)
 
-	fmt.Printf("Your Earnings Before Tax (EBT) is: %.1f", earningsBeforeTax)
-	fmt.Printf("Your Profit is: %.1f", profit)
-	fmt.Printf("Ratio: %.3f", ratio)
+	fmt.Printf("Your Earnings Before Tax (EBT) is: %.1f\n", earningsBeforeTax)
+	fmt.Printf("Your Profit is: %.1f\n", profit)
+	fmt.Printf("Ratio: %.3f\n", ratio)
 }
 
 func getUserInput(infoText string) (userInput float64){
