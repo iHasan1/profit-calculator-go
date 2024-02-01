@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	revenue, expenses, taxRate := getUserInput()
+	revenue := getUserInput("Revenue: ")
+	expenses := getUserInput("Expenses: ")
+	taxRate := getUserInput("Tax Rate: ")
 
 	earningsBeforeTax, profit, ratio := calcValues(revenue, expenses, taxRate)
 
@@ -12,13 +14,9 @@ func main() {
 	fmt.Printf("Ratio: %.2f", ratio)
 }
 
-func getUserInput() (rev float64, exp float64, tR float64){
-	fmt.Print("Enter your revenue: ")
-	fmt.Scan(&rev)
-	fmt.Print("Enter your expenses: ")
-	fmt.Scan(&exp)
-	fmt.Print("Enter the tax rate: ")
-	fmt.Scan(&tR)
+func getUserInput(infoText string) (userInput float64){
+	fmt.Print(infoText)
+	fmt.Scan(&userInput)
 	return
 }
 
